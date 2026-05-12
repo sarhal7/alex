@@ -16,9 +16,9 @@ const CONFIG = {
 
   /* ---------- Social Links ---------- */
   social: {
-    github:   "https://github.com/sarhal7",
-    twitter:  "https://twitter.com/",
-    linkedin: "https://linkedin.com/in/",
+    github:   "https://github.com/yourusername",
+    twitter:  "https://twitter.com/yourusername",
+    linkedin: "https://linkedin.com/in/yourusername",
     email:    "hello@example.com",
   },
 

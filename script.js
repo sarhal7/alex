@@ -231,10 +231,11 @@
       btn.disabled = true;
       btn.textContent = "Sending…";
 
-      // Simulate async send (replace with your own API endpoint)
+      // TODO: Replace this stub with a real API call, e.g. Formspree, EmailJS,
+      // or your own backend endpoint.  Until then the form only simulates sending.
       await new Promise(r => setTimeout(r, 1200));
 
-      showToast("Message sent! I'll be in touch soon ✓", "success");
+      showToast("Demo mode — wire up a real endpoint to send messages ✓", "success");
       form.reset();
       btn.disabled = false;
       btn.textContent = "Send Message →";

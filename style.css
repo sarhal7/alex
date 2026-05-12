@@ -50,8 +50,7 @@
   --border:     rgba(0,0,0,.08);
   --text:       #111;
   --text-muted: #666;
-  --accent-dim: rgba(124,58,237,.1);
-  --accent-glow:rgba(124,58,237,.25);
+  /* --accent-dim and --accent-glow are injected by script.js from config.js */
 }
 
 html { scroll-behavior: smooth; font-size: 16px; }
@@ -505,7 +504,7 @@ body::before {
   box-shadow: 0 16px 40px rgba(0,0,0,.25);
 }
 .project-card:hover::before { opacity: 1; }
-.project-card.featured { border-color: rgba(124,58,237,.3); }
+.project-card.featured { border-color: var(--accent-glow); }
 
 .project-img {
   width: 100%;
