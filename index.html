@@ -1779,9 +1779,11 @@
     const secObs = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
-          navLinks.forEach(l => l.style.color = '');
           const a = document.querySelector(`.nav__links a[href="#${e.target.id}"]`);
-          if (a) a.style.color = 'var(--color-accent)';
+          if (a) {
+            navLinks.forEach(l => l.style.color = '');
+            a.style.color = 'var(--color-accent)';
+          }
         }
       });
     }, { threshold: 0.4 });
