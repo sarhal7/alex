@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CreativeCenter — Discover What Works</title>
+  <title>Linea Studio — Desk Essentials</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
@@ -12,14 +12,14 @@
      CSS CUSTOM PROPERTIES — Edit here to rebrand the whole site
   ══════════════════════════════════════════════════════════ */
   :root {
-    --color-bg:         #0b080c;
-    --color-surface:    #111016;
-    --color-border:     #2c2c2c;
-    --color-text:       #eae5ec;
-    --color-muted:      #7d7d7d;
-    --color-accent:     #c2a4ff;
-    --color-accent-2:   #fb8dff;
-    --color-accent-dim: rgba(194,164,255,0.08);
+    --color-bg:         #0b0b10;
+    --color-surface:    #111118;
+    --color-border:     #2a2a34;
+    --color-text:       #f4f2f7;
+    --color-muted:      #9a96a3;
+    --color-accent:     #9cf4d4;
+    --color-accent-2:   #8aa4ff;
+    --color-accent-dim: rgba(156,244,212,0.08);
     --font:             "Geist", system-ui, sans-serif;
     --radius-card:      6px;
     --radius-pill:      999px;
@@ -133,7 +133,7 @@
     height: 50px;
     border-radius: 50%;
     background: var(--color-text);
-    box-shadow: 0 0 30px 0 rgba(175,131,255,0.6);
+    box-shadow: 0 0 30px 0 rgba(138,164,255,0.5);
     position: fixed;
     top: 0; left: 0;
     pointer-events: none;
@@ -154,22 +154,22 @@
     filter: blur(60px);
     pointer-events: none;
     z-index: 0;
-    animation: blobRotate 5s linear infinite;
+    animation: blobRotate 6s linear infinite;
   }
   .blob-1 {
     width: 320px; height: 320px;
     background: var(--color-accent-2);
     opacity: 0.12;
     top: -60px; left: -60px;
-    box-shadow: inset 0 0 80px rgba(84,0,255,0.5);
+    box-shadow: inset 0 0 80px rgba(84,0,255,0.4);
   }
   .blob-2 {
     width: 260px; height: 260px;
-    background: var(--color-accent-2);
+    background: var(--color-accent);
     opacity: 0.09;
     top: 30%; right: -80px;
     animation-direction: reverse;
-    box-shadow: inset 0 0 60px rgba(84,0,255,0.4);
+    box-shadow: inset 0 0 60px rgba(84,0,255,0.3);
   }
   @keyframes blobRotate {
     from { transform: rotate(0deg) scale(1); }
@@ -192,7 +192,7 @@
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 130px;
-    background: linear-gradient(to bottom, rgba(11,8,12,0.95) 0%, transparent 100%);
+    background: linear-gradient(to bottom, rgba(11,11,16,0.95) 0%, transparent 100%);
     pointer-events: none;
   }
   .nav__inner {
@@ -216,14 +216,16 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 13px;
+    font-size: 12px;
     color: var(--color-muted);
-    letter-spacing: 0.3px;
+    letter-spacing: 0.5px;
   }
   .nav__links {
     display: flex;
     align-items: center;
-    gap: 48px;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
   /* Slide-swap hover link (moncy.dev style) */
   .hover-link {
@@ -231,9 +233,9 @@
     display: block;
     overflow: hidden;
     height: 1.2em;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
     text-transform: uppercase;
     color: var(--color-muted);
     transition: color var(--transition);
@@ -297,7 +299,7 @@
   .hero__desc {
     font-size: 15px;
     color: var(--color-muted);
-    max-width: 520px;
+    max-width: 560px;
     line-height: 1.8;
     margin: 0 auto 48px;
     opacity: 0;
@@ -334,6 +336,11 @@
     color: var(--color-bg);
   }
   .btn--solid:hover { background: var(--color-text); }
+  .btn--mini {
+    padding: 8px 16px;
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
   .hero__scroll {
     position: absolute;
     bottom: 32px;
@@ -385,7 +392,7 @@
     flex-wrap: wrap;
   }
   .stat__value {
-    font-size: clamp(32px, 5vw, 56px);
+    font-size: clamp(28px, 4vw, 52px);
     font-weight: 600;
     letter-spacing: -2px;
     color: var(--color-text);
@@ -432,7 +439,7 @@
   .section-desc {
     font-size: 15px;
     color: var(--color-muted);
-    max-width: 480px;
+    max-width: 520px;
     line-height: 1.8;
     margin-bottom: 56px;
   }
@@ -483,7 +490,7 @@
     transition: background var(--transition);
     overflow: hidden;
   }
-  .card:hover { background: #16141b; }
+  .card:hover { background: #161620; }
 
   /* Corner brackets (moncy.dev WhatIDo style) */
   .card::before, .card::after {
@@ -524,15 +531,15 @@
     position: absolute;
     top: 14px;
     left: 14px;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 700;
     letter-spacing: 2px;
     color: var(--color-text);
-    background: rgba(11,8,12,0.7);
+    background: rgba(11,11,16,0.7);
     backdrop-filter: blur(8px);
     padding: 4px 10px;
     border-radius: var(--radius-pill);
-    border: 1px solid rgba(194,164,255,0.2);
+    border: 1px solid rgba(156,244,212,0.2);
   }
 
   /* Arrow overlay on hover */
@@ -570,6 +577,12 @@
     margin-bottom: 8px;
     color: var(--color-text);
   }
+  .card__desc {
+    font-size: 13px;
+    color: var(--color-muted);
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
   .card__meta {
     font-size: 12px;
     color: var(--color-muted);
@@ -584,6 +597,33 @@
     background: var(--color-border);
     flex-shrink: 0;
   }
+  .card__cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 16px;
+  }
+  .card__price {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+  }
+  .card__link {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+    transition: color var(--transition), border-color var(--transition);
+  }
+  .card__link:hover { color: var(--color-accent); border-color: var(--color-accent); }
 
   /* ── Card footer stats ── */
   .card__stats {
@@ -597,7 +637,7 @@
   }
   .card__stat + .card__stat { border-left: 1px solid var(--color-border); }
   .card__stat-val {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: -0.5px;
     color: var(--color-text);
@@ -611,7 +651,7 @@
   }
 
   /* ══════════════════════════════════════════════════════════
-     CREATOR CARD VARIANT (Collection 3)
+     CREATOR CARD VARIANT (Reviews)
   ══════════════════════════════════════════════════════════ */
   .card--creator .card__img { aspect-ratio: 1; }
   .card--creator .card__img img { height: 100%; }
@@ -645,6 +685,82 @@
     transition: border-color var(--transition);
   }
   .card--creator:hover .card__follow-pill { border-color: var(--color-accent); color: var(--color-accent); }
+  .card__quote {
+    font-size: 13px;
+    color: var(--color-muted);
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  /* ══════════════════════════════════════════════════════════
+     CHECKOUT STEPS
+  ══════════════════════════════════════════════════════════ */
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .step {
+    padding: 24px;
+    border-radius: var(--radius-card);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+  }
+  .step__num {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+  .step__title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 12px 0 10px;
+  }
+  .step__desc {
+    font-size: 13px;
+    color: var(--color-muted);
+    line-height: 1.7;
+  }
+
+  /* ══════════════════════════════════════════════════════════
+     FAQ
+  ══════════════════════════════════════════════════════════ */
+  .faq {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .faq details {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    padding: 18px 20px;
+  }
+  .faq summary {
+    list-style: none;
+    cursor: none;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after {
+    content: '+';
+    font-size: 16px;
+    color: var(--color-muted);
+  }
+  .faq details[open] summary { color: var(--color-accent); }
+  .faq details[open] summary::after { content: '−'; color: var(--color-accent); }
+  .faq p {
+    font-size: 13px;
+    color: var(--color-muted);
+    margin-top: 12px;
+    line-height: 1.7;
+  }
 
   /* ══════════════════════════════════════════════════════════
      SECTION DIVIDER
@@ -704,7 +820,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 55% 60% at 50% 50%, rgba(194,164,255,0.07) 0%, transparent 70%);
+    background: radial-gradient(ellipse 55% 60% at 50% 50%, rgba(156,244,212,0.08) 0%, transparent 70%);
   }
   .cta__eyebrow {
     font-size: 11px;
@@ -750,7 +866,7 @@
     font-size: 14px;
     color: var(--color-muted);
     line-height: 1.8;
-    max-width: 280px;
+    max-width: 320px;
   }
   .footer__col-title {
     font-size: 11px;
@@ -826,14 +942,26 @@
     .card-grid { grid-template-columns: repeat(2, 1fr); }
     .footer__top { grid-template-columns: repeat(2, 1fr); }
   }
+  @media (max-width: 900px) {
+    .steps { grid-template-columns: 1fr; }
+    .faq { grid-template-columns: 1fr; }
+  }
   @media (max-width: 640px) {
     .card-grid { grid-template-columns: 1fr; }
     .nav__email { display: none; }
-    .nav__links { gap: 24px; }
+    .nav__links { gap: 18px; }
     .footer__top { grid-template-columns: 1fr; }
     .hero__title { letter-spacing: -2px; }
     .stats__inner { gap: 40px; justify-content: center; }
     .stat__sep { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+  @media (pointer: coarse) {
+    body { cursor: auto; }
+    button, a, summary { cursor: pointer; }
+    #cursor { display: none; }
   }
   </style>
 </head>
@@ -844,10 +972,10 @@
   ══════════════════════════════════ -->
   <div id="loading">
     <div class="loading-marquee">
-      <span>A Creative Studio &nbsp;/&nbsp; A Creative Studio &nbsp;/&nbsp; A Creative Studio &nbsp;/&nbsp; A Creative Studio &nbsp;/&nbsp; A Creative Studio &nbsp;/&nbsp; A Creative Studio &nbsp;/&nbsp;</span>
+      <span>Linea Studio Essentials &nbsp;/&nbsp; Linea Studio Essentials &nbsp;/&nbsp; Linea Studio Essentials &nbsp;/&nbsp; Linea Studio Essentials &nbsp;/&nbsp; Linea Studio Essentials &nbsp;/&nbsp;</span>
     </div>
     <div class="loading-pill" id="loadingPill">
-      Loading <span id="loadingPct">0%</span><span class="loading-cursor"></span>
+      Preparing your cart <span id="loadingPct">0%</span><span class="loading-cursor"></span>
     </div>
   </div>
 
@@ -868,20 +996,23 @@
   <nav class="nav" id="nav" style="opacity:0;transition:opacity 0.8s 1.4s ease;pointer-events:none">
     <div class="nav-fade"></div>
     <div class="nav__inner">
-      <a href="#" class="nav__logo">Creative<span>Center</span></a>
-      <span class="nav__email">hello@creativecenter.io</span>
+      <a href="#" class="nav__logo">Linea<span>Studio</span></a>
+      <span class="nav__email">Free shipping $75+</span>
       <div class="nav__links">
-        <a href="#collection-1" class="hover-link">
-          <div class="hover-link__inner"><span>Top Ads</span><span>Top Ads</span></div>
+        <a href="#shop" class="hover-link">
+          <div class="hover-link__inner"><span>Shop</span><span>Shop</span></div>
         </a>
-        <a href="#collection-2" class="hover-link">
-          <div class="hover-link__inner"><span>Trending</span><span>Trending</span></div>
+        <a href="#categories" class="hover-link">
+          <div class="hover-link__inner"><span>Categories</span><span>Categories</span></div>
         </a>
-        <a href="#collection-3" class="hover-link">
-          <div class="hover-link__inner"><span>Creators</span><span>Creators</span></div>
+        <a href="#bundles" class="hover-link">
+          <div class="hover-link__inner"><span>Bundles</span><span>Bundles</span></div>
         </a>
-        <a href="#contact" class="hover-link">
-          <div class="hover-link__inner"><span>Contact</span><span>Contact</span></div>
+        <a href="#reviews" class="hover-link">
+          <div class="hover-link__inner"><span>Reviews</span><span>Reviews</span></div>
+        </a>
+        <a href="#faq" class="hover-link">
+          <div class="hover-link__inner"><span>FAQ</span><span>FAQ</span></div>
         </a>
       </div>
     </div>
@@ -891,18 +1022,18 @@
        HERO
   ══════════════════════════════════ -->
   <section class="hero">
-    <p class="hero__sup">Creative Center — Est. 2024</p>
+    <p class="hero__sup">Linea Studio — Minimal desk essentials</p>
     <h1 class="hero__title">
-      Discover<br>
-      <span class="hero__title-accent">What Works</span>
+      Make space<br>
+      <span class="hero__title-accent">for focused work</span>
     </h1>
-    <h2 class="hero__subtitle">Right Now</h2>
+    <h2 class="hero__subtitle">Small-batch objects that calm the chaos.</h2>
     <p class="hero__desc">
-      Explore top-performing ads, trending content, and the creators driving the biggest results — all in one place.
+      A curated collection of walnut, anodized aluminum, and matte ceramic tools designed to keep cables tidy, screens elevated, and daily rituals effortless.
     </p>
     <div class="hero__actions">
-      <button class="btn btn--solid">Explore Collections</button>
-      <button class="btn btn--outline">Learn More →</button>
+      <button class="btn btn--solid">Shop new arrivals</button>
+      <button class="btn btn--outline">Explore bundles →</button>
     </div>
     <div class="hero__scroll">
       <div class="hero__scroll-line"></div>
@@ -916,142 +1047,162 @@
   <div class="stats">
     <div class="container stats__inner">
       <div class="stat reveal">
-        <div class="stat__value">10<span>M+</span></div>
-        <div class="stat__label">Ads Analysed</div>
+        <div class="stat__value">Free</div>
+        <div class="stat__label">Shipping $75+</div>
       </div>
       <div class="stat__sep"></div>
       <div class="stat reveal reveal-delay-1">
-        <div class="stat__value">190<span>+</span></div>
-        <div class="stat__label">Countries</div>
+        <div class="stat__value">30<span>d</span></div>
+        <div class="stat__label">Easy returns</div>
       </div>
       <div class="stat__sep"></div>
       <div class="stat reveal reveal-delay-2">
-        <div class="stat__value">98<span>%</span></div>
-        <div class="stat__label">Accuracy</div>
+        <div class="stat__value">2<span>yr</span></div>
+        <div class="stat__label">Lighting warranty</div>
       </div>
       <div class="stat__sep"></div>
       <div class="stat reveal reveal-delay-3">
-        <div class="stat__value">24<span>h</span></div>
-        <div class="stat__label">Data Refresh</div>
+        <div class="stat__value">24-48<span>h</span></div>
+        <div class="stat__label">Dispatch window</div>
       </div>
     </div>
   </div>
 
   <!-- ══════════════════════════════════
-       COLLECTION 1 — Top Performing Ads
+       FEATURED PRODUCTS
   ══════════════════════════════════ -->
-  <section class="section" id="collection-1">
+  <section class="section" id="shop">
     <div class="container">
       <div class="section__head reveal">
         <div>
           <p class="section-label">Collection 01</p>
-          <h2 class="section-title">Top Performing<br>Ads</h2>
-          <p class="section-desc">The highest-impact short-form video ads across all industries this week.</p>
+          <h2 class="section-title">Featured<br>Products</h2>
+          <p class="section-desc">Signature pieces that elevate the feel and flow of your everyday workspace.</p>
         </div>
         <a href="#" class="section__view-all">
-          View All Ads
+          View all products
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
         </a>
       </div>
 
       <div class="card-grid">
-        <!-- Ad 1 -->
+        <!-- Product 1 -->
         <article class="card reveal reveal-delay-1">
           <div class="card__img" style="aspect-ratio:9/12">
-            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=533&fit=crop" alt="Luxury Watch" loading="lazy" />
-            <div class="card__num">01</div>
+            <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=400&h=533&fit=crop" alt="Walnut monitor shelf" loading="lazy" />
+            <div class="card__num">New</div>
             <div class="card__arrow">
               <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
             </div>
           </div>
           <div class="card__body">
-            <span class="card__tag">Fashion</span>
-            <h3 class="card__title">Luxury Watch — Summer Drop</h3>
+            <span class="card__tag">Workspace</span>
+            <h3 class="card__title">Walnut Lift Monitor Shelf</h3>
+            <p class="card__desc">Raises screens by 9 cm with a felt-lined drawer for adapters and pens.</p>
             <div class="card__meta">
-              <span>0:30s</span>
+              <span>Solid walnut</span>
               <span class="card__meta-dot"></span>
-              <span>Video Ad</span>
+              <span>2 lengths</span>
+            </div>
+            <div class="card__cta">
+              <div class="card__price">$148</div>
+              <button class="btn btn--outline btn--mini">Add to cart</button>
             </div>
           </div>
           <div class="card__stats">
-            <div class="card__stat"><div class="card__stat-val">4.2M</div><div class="card__stat-key">Views</div></div>
-            <div class="card__stat"><div class="card__stat-val">8.7%</div><div class="card__stat-key">CTR</div></div>
-            <div class="card__stat"><div class="card__stat-val">92</div><div class="card__stat-key">Score</div></div>
+            <div class="card__stat"><div class="card__stat-val">9cm</div><div class="card__stat-key">Lift</div></div>
+            <div class="card__stat"><div class="card__stat-val">Felt</div><div class="card__stat-key">Drawer</div></div>
+            <div class="card__stat"><div class="card__stat-val">Matte</div><div class="card__stat-key">Finish</div></div>
           </div>
         </article>
 
-        <!-- Ad 2 -->
+        <!-- Product 2 -->
         <article class="card reveal reveal-delay-2">
           <div class="card__img" style="aspect-ratio:9/12">
-            <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=400&h=533&fit=crop" alt="Skincare" loading="lazy" />
-            <div class="card__num">02</div>
+            <img src="https://images.unsplash.com/photo-1503602642458-232111445657?w=400&h=533&fit=crop" alt="Desk lamp" loading="lazy" />
+            <div class="card__num">Limited</div>
             <div class="card__arrow">
               <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
             </div>
           </div>
           <div class="card__body">
-            <span class="card__tag">Beauty</span>
-            <h3 class="card__title">Morning Skincare Routine</h3>
+            <span class="card__tag">Lighting</span>
+            <h3 class="card__title">Arc Halo Desk Lamp</h3>
+            <p class="card__desc">Edge-lit aluminum arm with a touch dimmer and USB-C power base.</p>
             <div class="card__meta">
-              <span>0:45s</span>
+              <span>Warm 2700K</span>
               <span class="card__meta-dot"></span>
-              <span>Tutorial Ad</span>
+              <span>3 brightness levels</span>
+            </div>
+            <div class="card__cta">
+              <div class="card__price">$196</div>
+              <button class="btn btn--outline btn--mini">Add to cart</button>
             </div>
           </div>
           <div class="card__stats">
-            <div class="card__stat"><div class="card__stat-val">3.1M</div><div class="card__stat-key">Views</div></div>
-            <div class="card__stat"><div class="card__stat-val">11.2%</div><div class="card__stat-key">CTR</div></div>
-            <div class="card__stat"><div class="card__stat-val">88</div><div class="card__stat-key">Score</div></div>
+            <div class="card__stat"><div class="card__stat-val">Touch</div><div class="card__stat-key">Dimmer</div></div>
+            <div class="card__stat"><div class="card__stat-val">USB-C</div><div class="card__stat-key">Power</div></div>
+            <div class="card__stat"><div class="card__stat-val">45cm</div><div class="card__stat-key">Reach</div></div>
           </div>
         </article>
 
-        <!-- Ad 3 -->
+        <!-- Product 3 -->
         <article class="card reveal reveal-delay-3">
           <div class="card__img" style="aspect-ratio:9/12">
-            <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&h=533&fit=crop" alt="Gaming" loading="lazy" />
-            <div class="card__num">03</div>
+            <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=400&h=533&fit=crop" alt="Ceramic tray" loading="lazy" />
+            <div class="card__num">Studio</div>
             <div class="card__arrow">
               <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
             </div>
           </div>
           <div class="card__body">
-            <span class="card__tag">Gaming</span>
-            <h3 class="card__title">ProGamer Headset X1</h3>
+            <span class="card__tag">Desk Detail</span>
+            <h3 class="card__title">Ceramic Catchall Tray</h3>
+            <p class="card__desc">Matte stoneware tray with a cork base to quiet keys and earbuds.</p>
             <div class="card__meta">
-              <span>0:15s</span>
+              <span>Ø18 cm</span>
               <span class="card__meta-dot"></span>
-              <span>Product Ad</span>
+              <span>Soft-touch glaze</span>
+            </div>
+            <div class="card__cta">
+              <div class="card__price">$54</div>
+              <button class="btn btn--outline btn--mini">Add to cart</button>
             </div>
           </div>
           <div class="card__stats">
-            <div class="card__stat"><div class="card__stat-val">5.8M</div><div class="card__stat-key">Views</div></div>
-            <div class="card__stat"><div class="card__stat-val">6.4%</div><div class="card__stat-key">CTR</div></div>
-            <div class="card__stat"><div class="card__stat-val">95</div><div class="card__stat-key">Score</div></div>
+            <div class="card__stat"><div class="card__stat-val">Cork</div><div class="card__stat-key">Base</div></div>
+            <div class="card__stat"><div class="card__stat-val">Matte</div><div class="card__stat-key">Glaze</div></div>
+            <div class="card__stat"><div class="card__stat-val">Stack</div><div class="card__stat-key">Ready</div></div>
           </div>
         </article>
 
-        <!-- Ad 4 -->
+        <!-- Product 4 -->
         <article class="card reveal reveal-delay-4">
           <div class="card__img" style="aspect-ratio:9/12">
-            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&h=533&fit=crop" alt="Fashion" loading="lazy" />
-            <div class="card__num">04</div>
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=533&fit=crop" alt="Cable organizer" loading="lazy" />
+            <div class="card__num">Best</div>
             <div class="card__arrow">
               <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
             </div>
           </div>
           <div class="card__body">
-            <span class="card__tag">Fashion</span>
-            <h3 class="card__title">Autumn Collection Drop</h3>
+            <span class="card__tag">Cable Care</span>
+            <h3 class="card__title">Modular Cable Dock</h3>
+            <p class="card__desc">Weighted aluminum dock with magnetic channels for four charging lines.</p>
             <div class="card__meta">
-              <span>1:00s</span>
+              <span>4 channels</span>
               <span class="card__meta-dot"></span>
-              <span>Brand Ad</span>
+              <span>Rubber grip base</span>
+            </div>
+            <div class="card__cta">
+              <div class="card__price">$68</div>
+              <button class="btn btn--outline btn--mini">Add to cart</button>
             </div>
           </div>
           <div class="card__stats">
-            <div class="card__stat"><div class="card__stat-val">2.6M</div><div class="card__stat-key">Views</div></div>
-            <div class="card__stat"><div class="card__stat-val">9.1%</div><div class="card__stat-key">CTR</div></div>
-            <div class="card__stat"><div class="card__stat-val">84</div><div class="card__stat-key">Score</div></div>
+            <div class="card__stat"><div class="card__stat-val">Mag</div><div class="card__stat-key">Hold</div></div>
+            <div class="card__stat"><div class="card__stat-val">1.2kg</div><div class="card__stat-key">Weight</div></div>
+            <div class="card__stat"><div class="card__stat-val">Fits</div><div class="card__stat-key">USB-C</div></div>
           </div>
         </article>
       </div>
@@ -1061,130 +1212,136 @@
   <!-- ── Marquee strip ── -->
   <div class="marquee-strip">
     <div class="marquee-strip__track">
-      <span>Top Ads <em>✦</em></span>
-      <span>Trending Content <em>✦</em></span>
-      <span>Rising Creators <em>✦</em></span>
-      <span>Industry Insights <em>✦</em></span>
-      <span>Creative Tools <em>✦</em></span>
-      <span>Analytics <em>✦</em></span>
-      <span>Top Ads <em>✦</em></span>
-      <span>Trending Content <em>✦</em></span>
-      <span>Rising Creators <em>✦</em></span>
-      <span>Industry Insights <em>✦</em></span>
-      <span>Creative Tools <em>✦</em></span>
-      <span>Analytics <em>✦</em></span>
+      <span>New Drop <em>✦</em></span>
+      <span>Minimal Desk Reset <em>✦</em></span>
+      <span>Gift-ready Packaging <em>✦</em></span>
+      <span>Small-batch Craft <em>✦</em></span>
+      <span>Desk Calm Essentials <em>✦</em></span>
+      <span>New Drop <em>✦</em></span>
+      <span>Minimal Desk Reset <em>✦</em></span>
+      <span>Gift-ready Packaging <em>✦</em></span>
+      <span>Small-batch Craft <em>✦</em></span>
+      <span>Desk Calm Essentials <em>✦</em></span>
     </div>
   </div>
 
   <!-- ══════════════════════════════════
-       COLLECTION 2 — Trending This Week
+       CATEGORIES
   ══════════════════════════════════ -->
-  <section class="section" id="collection-2">
+  <section class="section" id="categories">
     <div class="container">
       <div class="section__head reveal">
         <div>
           <p class="section-label">Collection 02</p>
-          <h2 class="section-title">Trending<br>This Week</h2>
-          <p class="section-desc">Organic hashtags and content with the highest growth velocity across all categories.</p>
+          <h2 class="section-title">Shop by<br>Category</h2>
+          <p class="section-desc">Clear pathways for every space — find the pieces that fit your workflow.</p>
         </div>
         <a href="#" class="section__view-all">
-          View All Trends
+          View all categories
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
         </a>
       </div>
 
       <div class="card-grid">
-        <!-- Trend 1 -->
+        <!-- Category 1 -->
         <article class="card reveal reveal-delay-1">
           <div class="card__img" style="aspect-ratio:16/9">
-            <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?w=600&h=338&fit=crop" alt="Dance" loading="lazy" />
-            <div class="card__num">#1</div>
+            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=600&h=338&fit=crop" alt="Workspace essentials" loading="lazy" />
+            <div class="card__num">01</div>
             <div class="card__arrow">
               <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
             </div>
           </div>
           <div class="card__body">
-            <span class="card__tag">Dance</span>
-            <h3 class="card__title">#SummerVibeChallenge</h3>
-            <div class="card__meta">
-              <span>+240% this week</span>
-            </div>
-          </div>
-          <div class="card__stats">
-            <div class="card__stat"><div class="card__stat-val">18M</div><div class="card__stat-key">Uses</div></div>
-            <div class="card__stat"><div class="card__stat-val">47K</div><div class="card__stat-key">Videos</div></div>
-            <div class="card__stat"><div class="card__stat-val">↑240%</div><div class="card__stat-key">Growth</div></div>
+            <span class="card__tag">Category</span>
+            <h3 class="card__title">Workspace Essentials</h3>
+            <p class="card__desc">Monitor shelves, risers, and trays designed to keep surfaces open.</p>
+            <a href="#" class="card__link">Shop essentials</a>
           </div>
         </article>
 
-        <!-- Trend 2 -->
+        <!-- Category 2 -->
         <article class="card reveal reveal-delay-2">
           <div class="card__img" style="aspect-ratio:16/9">
-            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=338&fit=crop" alt="Fitness" loading="lazy" />
-            <div class="card__num">#2</div>
+            <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=600&h=338&fit=crop" alt="Lighting" loading="lazy" />
+            <div class="card__num">02</div>
             <div class="card__arrow">
               <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
             </div>
           </div>
           <div class="card__body">
-            <span class="card__tag">Fitness</span>
-            <h3 class="card__title">#HomeWorkoutHacks</h3>
-            <div class="card__meta">
-              <span>+185% this week</span>
-            </div>
-          </div>
-          <div class="card__stats">
-            <div class="card__stat"><div class="card__stat-val">12M</div><div class="card__stat-key">Uses</div></div>
-            <div class="card__stat"><div class="card__stat-val">31K</div><div class="card__stat-key">Videos</div></div>
-            <div class="card__stat"><div class="card__stat-val">↑185%</div><div class="card__stat-key">Growth</div></div>
+            <span class="card__tag">Category</span>
+            <h3 class="card__title">Lighting</h3>
+            <p class="card__desc">Warm, adjustable task lamps with soft-touch controls.</p>
+            <a href="#" class="card__link">Shop lighting</a>
           </div>
         </article>
 
-        <!-- Trend 3 -->
+        <!-- Category 3 -->
         <article class="card reveal reveal-delay-3">
           <div class="card__img" style="aspect-ratio:16/9">
-            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=338&fit=crop" alt="Food" loading="lazy" />
-            <div class="card__num">#3</div>
+            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=600&h=338&fit=crop" alt="Storage" loading="lazy" />
+            <div class="card__num">03</div>
             <div class="card__arrow">
               <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
             </div>
           </div>
           <div class="card__body">
-            <span class="card__tag">Food</span>
-            <h3 class="card__title">#5MinuteMeals</h3>
-            <div class="card__meta">
-              <span>+162% this week</span>
-            </div>
-          </div>
-          <div class="card__stats">
-            <div class="card__stat"><div class="card__stat-val">9.4M</div><div class="card__stat-key">Uses</div></div>
-            <div class="card__stat"><div class="card__stat-val">24K</div><div class="card__stat-key">Videos</div></div>
-            <div class="card__stat"><div class="card__stat-val">↑162%</div><div class="card__stat-key">Growth</div></div>
+            <span class="card__tag">Category</span>
+            <h3 class="card__title">Storage &amp; Travel</h3>
+            <p class="card__desc">Slim pouches, cable docks, and organizers made for movement.</p>
+            <a href="#" class="card__link">Shop storage</a>
           </div>
         </article>
 
-        <!-- Trend 4 -->
+        <!-- Category 4 -->
         <article class="card reveal reveal-delay-4">
           <div class="card__img" style="aspect-ratio:16/9">
-            <img src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?w=600&h=338&fit=crop" alt="DIY" loading="lazy" />
-            <div class="card__num">#4</div>
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600&h=338&fit=crop" alt="Textiles" loading="lazy" />
+            <div class="card__num">04</div>
             <div class="card__arrow">
               <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
             </div>
           </div>
           <div class="card__body">
-            <span class="card__tag">DIY</span>
-            <h3 class="card__title">#RoomGlowUp</h3>
-            <div class="card__meta">
-              <span>+139% this week</span>
-            </div>
-          </div>
-          <div class="card__stats">
-            <div class="card__stat"><div class="card__stat-val">7.1M</div><div class="card__stat-key">Uses</div></div>
-            <div class="card__stat"><div class="card__stat-val">18K</div><div class="card__stat-key">Videos</div></div>
-            <div class="card__stat"><div class="card__stat-val">↑139%</div><div class="card__stat-key">Growth</div></div>
+            <span class="card__tag">Category</span>
+            <h3 class="card__title">Textiles &amp; Care</h3>
+            <p class="card__desc">Desk mats, microfiber cloths, and seasonal care kits.</p>
+            <a href="#" class="card__link">Shop textiles</a>
           </div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       CHECKOUT STEPS
+  ══════════════════════════════════ -->
+  <section class="section" id="checkout">
+    <div class="container">
+      <div class="section__head reveal">
+        <div>
+          <p class="section-label">Checkout</p>
+          <h2 class="section-title">A simple path<br>to purchase</h2>
+          <p class="section-desc">Clear selections, transparent delivery estimates, and secure Shopify checkout built to minimize cart drop-off.</p>
+        </div>
+      </div>
+      <div class="steps">
+        <div class="step reveal reveal-delay-1">
+          <div class="step__num">Step 01</div>
+          <div class="step__title">Choose your finish</div>
+          <div class="step__desc">Select size, color, and bundle options with availability shown upfront.</div>
+        </div>
+        <div class="step reveal reveal-delay-2">
+          <div class="step__num">Step 02</div>
+          <div class="step__title">Fast, clear shipping</div>
+          <div class="step__desc">Rates appear at checkout with tracking and carbon-neutral options.</div>
+        </div>
+        <div class="step reveal reveal-delay-3">
+          <div class="step__num">Step 03</div>
+          <div class="step__title">Secure payment</div>
+          <div class="step__desc">Shop Pay, Apple Pay, and card options with saved addresses for repeat buyers.</div>
+        </div>
       </div>
     </div>
   </section>
@@ -1192,43 +1349,160 @@
   <!-- ── Marquee strip ── -->
   <div class="marquee-strip" style="--marquee-dir:-1">
     <div class="marquee-strip__track" style="animation-direction:reverse">
-      <span>Sophia Martinez <em>✦</em></span>
-      <span>Alex Chen <em>✦</em></span>
-      <span>Zara Fitness <em>✦</em></span>
-      <span>Marco Rossi <em>✦</em></span>
-      <span>Rising Creators <em>✦</em></span>
-      <span>Brand Partnerships <em>✦</em></span>
-      <span>Sophia Martinez <em>✦</em></span>
-      <span>Alex Chen <em>✦</em></span>
-      <span>Zara Fitness <em>✦</em></span>
-      <span>Marco Rossi <em>✦</em></span>
-      <span>Rising Creators <em>✦</em></span>
-      <span>Brand Partnerships <em>✦</em></span>
+      <span>Bundle &amp; Save <em>✦</em></span>
+      <span>Starter Kits <em>✦</em></span>
+      <span>Desk Reset Sets <em>✦</em></span>
+      <span>Giftable Picks <em>✦</em></span>
+      <span>Bundle &amp; Save <em>✦</em></span>
+      <span>Starter Kits <em>✦</em></span>
+      <span>Desk Reset Sets <em>✦</em></span>
+      <span>Giftable Picks <em>✦</em></span>
     </div>
   </div>
 
   <!-- ══════════════════════════════════
-       COLLECTION 3 — Rising Creators
+       BUNDLES
   ══════════════════════════════════ -->
-  <section class="section" id="collection-3">
+  <section class="section" id="bundles">
     <div class="container">
       <div class="section__head reveal">
         <div>
           <p class="section-label">Collection 03</p>
-          <h2 class="section-title">Rising<br>Creators</h2>
-          <p class="section-desc">The fastest-growing content creators delivering exceptional brand results.</p>
+          <h2 class="section-title">Starter Sets<br>&amp; Bundles</h2>
+          <p class="section-desc">Curated combinations that cover the essentials and save you a step.</p>
         </div>
         <a href="#" class="section__view-all">
-          View All Creators
+          View all bundles
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
         </a>
       </div>
 
       <div class="card-grid">
-        <!-- Creator 1 -->
+        <!-- Bundle 1 -->
+        <article class="card reveal reveal-delay-1">
+          <div class="card__img" style="aspect-ratio:16/9">
+            <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=600&h=338&fit=crop" alt="Focus starter set" loading="lazy" />
+            <div class="card__num">Set 01</div>
+            <div class="card__arrow">
+              <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </div>
+          </div>
+          <div class="card__body">
+            <span class="card__tag">Bundle</span>
+            <h3 class="card__title">Focus Starter Set</h3>
+            <p class="card__desc">Monitor shelf, cable dock, and ceramic tray in a matching walnut tone.</p>
+            <div class="card__cta">
+              <div class="card__price">$248</div>
+              <button class="btn btn--outline btn--mini">Add bundle</button>
+            </div>
+          </div>
+          <div class="card__stats">
+            <div class="card__stat"><div class="card__stat-val">3</div><div class="card__stat-key">Pieces</div></div>
+            <div class="card__stat"><div class="card__stat-val">Save</div><div class="card__stat-key">12%</div></div>
+            <div class="card__stat"><div class="card__stat-val">Desk</div><div class="card__stat-key">Reset</div></div>
+          </div>
+        </article>
+
+        <!-- Bundle 2 -->
+        <article class="card reveal reveal-delay-2">
+          <div class="card__img" style="aspect-ratio:16/9">
+            <img src="https://images.unsplash.com/photo-1503602642458-232111445657?w=600&h=338&fit=crop" alt="Night shift set" loading="lazy" />
+            <div class="card__num">Set 02</div>
+            <div class="card__arrow">
+              <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </div>
+          </div>
+          <div class="card__body">
+            <span class="card__tag">Bundle</span>
+            <h3 class="card__title">Night Shift Set</h3>
+            <p class="card__desc">Arc lamp, desk mat, and cable dock tuned for late-night focus.</p>
+            <div class="card__cta">
+              <div class="card__price">$268</div>
+              <button class="btn btn--outline btn--mini">Add bundle</button>
+            </div>
+          </div>
+          <div class="card__stats">
+            <div class="card__stat"><div class="card__stat-val">3</div><div class="card__stat-key">Pieces</div></div>
+            <div class="card__stat"><div class="card__stat-val">Warm</div><div class="card__stat-key">Light</div></div>
+            <div class="card__stat"><div class="card__stat-val">Soft</div><div class="card__stat-key">Finish</div></div>
+          </div>
+        </article>
+
+        <!-- Bundle 3 -->
+        <article class="card reveal reveal-delay-3">
+          <div class="card__img" style="aspect-ratio:16/9">
+            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=600&h=338&fit=crop" alt="Creator kit" loading="lazy" />
+            <div class="card__num">Set 03</div>
+            <div class="card__arrow">
+              <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </div>
+          </div>
+          <div class="card__body">
+            <span class="card__tag">Bundle</span>
+            <h3 class="card__title">Creator Kit</h3>
+            <p class="card__desc">Desk shelf, lamp, and felt trays for clean filming surfaces.</p>
+            <div class="card__cta">
+              <div class="card__price">$294</div>
+              <button class="btn btn--outline btn--mini">Add bundle</button>
+            </div>
+          </div>
+          <div class="card__stats">
+            <div class="card__stat"><div class="card__stat-val">3</div><div class="card__stat-key">Pieces</div></div>
+            <div class="card__stat"><div class="card__stat-val">Neutral</div><div class="card__stat-key">Tone</div></div>
+            <div class="card__stat"><div class="card__stat-val">Photo</div><div class="card__stat-key">Ready</div></div>
+          </div>
+        </article>
+
+        <!-- Bundle 4 -->
+        <article class="card reveal reveal-delay-4">
+          <div class="card__img" style="aspect-ratio:16/9">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600&h=338&fit=crop" alt="Travel lite pack" loading="lazy" />
+            <div class="card__num">Set 04</div>
+            <div class="card__arrow">
+              <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </div>
+          </div>
+          <div class="card__body">
+            <span class="card__tag">Bundle</span>
+            <h3 class="card__title">Travel Lite Pack</h3>
+            <p class="card__desc">Slim cable pouch, microfiber cloth, and compact tray for hotel desks.</p>
+            <div class="card__cta">
+              <div class="card__price">$118</div>
+              <button class="btn btn--outline btn--mini">Add bundle</button>
+            </div>
+          </div>
+          <div class="card__stats">
+            <div class="card__stat"><div class="card__stat-val">3</div><div class="card__stat-key">Pieces</div></div>
+            <div class="card__stat"><div class="card__stat-val">Slim</div><div class="card__stat-key">Profile</div></div>
+            <div class="card__stat"><div class="card__stat-val">Carry</div><div class="card__stat-key">On</div></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       REVIEWS
+  ══════════════════════════════════ -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="section__head reveal">
+        <div>
+          <p class="section-label">Customer Notes</p>
+          <h2 class="section-title">Loved by<br>Focused Makers</h2>
+          <p class="section-desc">Thoughtful reviews from customers building calmer, cleaner workspaces.</p>
+        </div>
+        <a href="#" class="section__view-all">
+          Read all reviews
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </div>
+
+      <div class="card-grid">
+        <!-- Review 1 -->
         <article class="card card--creator reveal reveal-delay-1">
           <div class="card__img" style="aspect-ratio:1">
-            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&h=400&fit=crop&crop=face" alt="Sophia" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=400&h=400&fit=crop" alt="Workspace shelf" loading="lazy" />
             <div class="card__arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
           </div>
           <div class="card__avatar-wrap">
@@ -1236,26 +1510,26 @@
           </div>
           <div class="card__body">
             <h3 class="card__title">Sophia Martinez</h3>
-            <div class="card__handle">@sophiastyle</div>
+            <div class="card__handle">Verified buyer — Walnut Shelf</div>
             <div class="card__follow-pill">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-              4.2M Followers
+              ★★★★★ 5.0 rating
             </div>
+            <p class="card__quote">“The shelf fits my 27-inch monitor perfectly and the hidden drawer keeps adapters out of sight.”</p>
             <div class="card__meta" style="justify-content:center">
-              <span>Fashion</span><span class="card__meta-dot"></span><span>Beauty</span>
+              <span>Los Angeles</span><span class="card__meta-dot"></span><span>Workspace reset</span>
             </div>
           </div>
           <div class="card__stats">
-            <div class="card__stat"><div class="card__stat-val">9.4%</div><div class="card__stat-key">Eng. Rate</div></div>
-            <div class="card__stat"><div class="card__stat-val">3.2M</div><div class="card__stat-key">Avg Views</div></div>
-            <div class="card__stat"><div class="card__stat-val">98</div><div class="card__stat-key">Score</div></div>
+            <div class="card__stat"><div class="card__stat-val">27"</div><div class="card__stat-key">Screen</div></div>
+            <div class="card__stat"><div class="card__stat-val">Walnut</div><div class="card__stat-key">Finish</div></div>
+            <div class="card__stat"><div class="card__stat-val">5</div><div class="card__stat-key">Days</div></div>
           </div>
         </article>
 
-        <!-- Creator 2 -->
+        <!-- Review 2 -->
         <article class="card card--creator reveal reveal-delay-2">
           <div class="card__img" style="aspect-ratio:1">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="Alex" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1503602642458-232111445657?w=400&h=400&fit=crop" alt="Desk lamp" loading="lazy" />
             <div class="card__arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
           </div>
           <div class="card__avatar-wrap">
@@ -1263,53 +1537,53 @@
           </div>
           <div class="card__body">
             <h3 class="card__title">Alex Chen</h3>
-            <div class="card__handle">@techwithalex</div>
+            <div class="card__handle">Verified buyer — Arc Lamp</div>
             <div class="card__follow-pill">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-              2.8M Followers
+              ★★★★☆ 4.8 rating
             </div>
+            <p class="card__quote">“The touch dimmer is smooth and the warm light keeps the room calm during late edits.”</p>
             <div class="card__meta" style="justify-content:center">
-              <span>Tech</span><span class="card__meta-dot"></span><span>Reviews</span>
+              <span>Toronto</span><span class="card__meta-dot"></span><span>Night setup</span>
             </div>
           </div>
           <div class="card__stats">
-            <div class="card__stat"><div class="card__stat-val">7.1%</div><div class="card__stat-key">Eng. Rate</div></div>
-            <div class="card__stat"><div class="card__stat-val">1.9M</div><div class="card__stat-key">Avg Views</div></div>
-            <div class="card__stat"><div class="card__stat-val">91</div><div class="card__stat-key">Score</div></div>
+            <div class="card__stat"><div class="card__stat-val">USB-C</div><div class="card__stat-key">Power</div></div>
+            <div class="card__stat"><div class="card__stat-val">Warm</div><div class="card__stat-key">Glow</div></div>
+            <div class="card__stat"><div class="card__stat-val">3</div><div class="card__stat-key">Levels</div></div>
           </div>
         </article>
 
-        <!-- Creator 3 -->
+        <!-- Review 3 -->
         <article class="card card--creator reveal reveal-delay-3">
           <div class="card__img" style="aspect-ratio:1">
-            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&h=400&fit=crop&crop=face" alt="Zara" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=400&h=400&fit=crop" alt="Ceramic tray" loading="lazy" />
             <div class="card__arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
           </div>
           <div class="card__avatar-wrap">
             <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=72&h=72&fit=crop&crop=face" alt="Zara avatar" />
           </div>
           <div class="card__body">
-            <h3 class="card__title">Zara Fitness</h3>
-            <div class="card__handle">@fitnesswithzara</div>
+            <h3 class="card__title">Zara Patel</h3>
+            <div class="card__handle">Verified buyer — Catchall Tray</div>
             <div class="card__follow-pill">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-              6.5M Followers
+              ★★★★★ 5.0 rating
             </div>
+            <p class="card__quote">“The matte tray keeps my desk quiet and makes daily resets feel intentional.”</p>
             <div class="card__meta" style="justify-content:center">
-              <span>Fitness</span><span class="card__meta-dot"></span><span>Wellness</span>
+              <span>London</span><span class="card__meta-dot"></span><span>Desk routine</span>
             </div>
           </div>
           <div class="card__stats">
-            <div class="card__stat"><div class="card__stat-val">12.3%</div><div class="card__stat-key">Eng. Rate</div></div>
-            <div class="card__stat"><div class="card__stat-val">4.7M</div><div class="card__stat-key">Avg Views</div></div>
-            <div class="card__stat"><div class="card__stat-val">97</div><div class="card__stat-key">Score</div></div>
+            <div class="card__stat"><div class="card__stat-val">Ø18</div><div class="card__stat-key">Size</div></div>
+            <div class="card__stat"><div class="card__stat-val">Cork</div><div class="card__stat-key">Base</div></div>
+            <div class="card__stat"><div class="card__stat-val">2</div><div class="card__stat-key">Trays</div></div>
           </div>
         </article>
 
-        <!-- Creator 4 -->
+        <!-- Review 4 -->
         <article class="card card--creator reveal reveal-delay-4">
           <div class="card__img" style="aspect-ratio:1">
-            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face" alt="Marco" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=400&fit=crop" alt="Cable dock" loading="lazy" />
             <div class="card__arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
           </div>
           <div class="card__avatar-wrap">
@@ -1317,21 +1591,54 @@
           </div>
           <div class="card__body">
             <h3 class="card__title">Marco Rossi</h3>
-            <div class="card__handle">@marcofood</div>
+            <div class="card__handle">Verified buyer — Cable Dock</div>
             <div class="card__follow-pill">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-              1.9M Followers
+              ★★★★☆ 4.7 rating
             </div>
+            <p class="card__quote">“Finally no more cables slipping off the desk — the dock stays put.”</p>
             <div class="card__meta" style="justify-content:center">
-              <span>Food</span><span class="card__meta-dot"></span><span>Lifestyle</span>
+              <span>Milan</span><span class="card__meta-dot"></span><span>Travel desk</span>
             </div>
           </div>
           <div class="card__stats">
-            <div class="card__stat"><div class="card__stat-val">8.6%</div><div class="card__stat-key">Eng. Rate</div></div>
-            <div class="card__stat"><div class="card__stat-val">1.3M</div><div class="card__stat-key">Avg Views</div></div>
-            <div class="card__stat"><div class="card__stat-val">85</div><div class="card__stat-key">Score</div></div>
+            <div class="card__stat"><div class="card__stat-val">4</div><div class="card__stat-key">Lines</div></div>
+            <div class="card__stat"><div class="card__stat-val">1.2kg</div><div class="card__stat-key">Weight</div></div>
+            <div class="card__stat"><div class="card__stat-val">Steel</div><div class="card__stat-key">Core</div></div>
           </div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       FAQ
+  ══════════════════════════════════ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section__head reveal">
+        <div>
+          <p class="section-label">FAQ</p>
+          <h2 class="section-title">Shipping &amp;<br>Support</h2>
+          <p class="section-desc">Quick answers to keep your checkout smooth and your setup on track.</p>
+        </div>
+      </div>
+      <div class="faq">
+        <details class="reveal reveal-delay-1">
+          <summary>How long does delivery take?</summary>
+          <p>Orders dispatch within 24–48 hours. Delivery times are shown at checkout based on your location.</p>
+        </details>
+        <details class="reveal reveal-delay-2">
+          <summary>Can I return or exchange an item?</summary>
+          <p>Yes. We offer 30-day returns on unused items with original packaging.</p>
+        </details>
+        <details class="reveal reveal-delay-3">
+          <summary>What payment methods are accepted?</summary>
+          <p>Shop Pay, Apple Pay, major credit cards, and PayPal are available at checkout.</p>
+        </details>
+        <details class="reveal reveal-delay-4">
+          <summary>Do you ship internationally?</summary>
+          <p>We ship worldwide with tracked options. Duties and taxes are calculated at checkout.</p>
+        </details>
       </div>
     </div>
   </section>
@@ -1341,11 +1648,11 @@
   ══════════════════════════════════ -->
   <div class="sep"></div>
   <section class="cta reveal" id="contact">
-    <p class="cta__eyebrow">Ready to create?</p>
-    <h2 class="cta__title">Make <strong>Winning</strong><br>Ads Today</h2>
+    <p class="cta__eyebrow">Ready to refresh?</p>
+    <h2 class="cta__title">Build a <strong>Calm</strong><br>Workspace Today</h2>
     <div style="display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap">
-      <button class="btn btn--solid" style="padding:14px 36px;font-size:14px">Start for Free</button>
-      <button class="btn btn--outline" style="padding:14px 36px;font-size:14px">Book a Demo</button>
+      <button class="btn btn--solid" style="padding:14px 36px;font-size:14px">Shop best sellers</button>
+      <button class="btn btn--outline" style="padding:14px 36px;font-size:14px">Start checkout</button>
     </div>
   </section>
 
@@ -1356,45 +1663,45 @@
     <div class="container">
       <div class="footer__top">
         <div>
-          <div class="footer__brand-name">Creative<span>Center</span></div>
-          <p class="footer__brand-desc">The world's leading platform for discovering high-performance creative content and ad inspiration.</p>
+          <div class="footer__brand-name">Linea<span>Studio</span></div>
+          <p class="footer__brand-desc">Minimal desk essentials crafted for clarity, made in small batches, and shipped with care.</p>
         </div>
         <div>
-          <div class="footer__col-title">Discover</div>
+          <div class="footer__col-title">Shop</div>
           <nav class="footer__links">
-            <a href="#" class="footer__link">Top Ads <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
-            <a href="#" class="footer__link">Trending Hashtags <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
-            <a href="#" class="footer__link">Rising Creators <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
-            <a href="#" class="footer__link">Insights <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+            <a href="#shop" class="footer__link">Featured products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+            <a href="#categories" class="footer__link">Categories <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+            <a href="#bundles" class="footer__link">Bundles <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+            <a href="#reviews" class="footer__link">Reviews <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
           </nav>
         </div>
         <div>
-          <div class="footer__col-title">Tools</div>
+          <div class="footer__col-title">Support</div>
           <nav class="footer__links">
-            <a href="#" class="footer__link">Ad Builder <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
-            <a href="#" class="footer__link">Analytics <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
-            <a href="#" class="footer__link">Audience Planner <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
-            <a href="#" class="footer__link">Brand Safety <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+            <a href="#faq" class="footer__link">Shipping &amp; returns <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+            <a href="#" class="footer__link">Order tracking <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+            <a href="#" class="footer__link">Warranty <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+            <a href="#" class="footer__link">Contact <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
           </nav>
         </div>
         <div>
-          <div class="footer__col-title">Company</div>
+          <div class="footer__col-title">Studio</div>
           <nav class="footer__links">
-            <a href="#" class="footer__link">About <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
-            <a href="#" class="footer__link">Careers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
-            <a href="#" class="footer__link">Privacy Policy <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
-            <a href="#" class="footer__link">Terms of Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+            <a href="#" class="footer__link">About Linea <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+            <a href="#" class="footer__link">Materials guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+            <a href="#" class="footer__link">Privacy policy <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+            <a href="#" class="footer__link">Terms of service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
           </nav>
         </div>
       </div>
 
       <div class="footer__bottom">
-        <p class="footer__copy">© 2026 <span>CreativeCenter</span>. Designed & Developed with care.</p>
+        <p class="footer__copy">© 2026 <span>Linea Studio</span>. Designed for calm, shipped with care.</p>
         <div class="footer__socials">
-          <a href="#" class="footer__social">Twitter</a>
           <a href="#" class="footer__social">Instagram</a>
-          <a href="#" class="footer__social">LinkedIn</a>
-          <a href="#" class="footer__social">GitHub</a>
+          <a href="#" class="footer__social">Pinterest</a>
+          <a href="#" class="footer__social">TikTok</a>
+          <a href="#" class="footer__social">YouTube</a>
         </div>
       </div>
     </div>
@@ -1407,25 +1714,27 @@
   (() => {
     /* ── Custom cursor ── */
     const cursor = document.getElementById('cursor');
-    let cx = window.innerWidth / 2, cy = window.innerHeight / 2;
-    let tx = cx, ty = cy;
+    if (cursor) {
+      let cx = window.innerWidth / 2, cy = window.innerHeight / 2;
+      let tx = cx, ty = cy;
 
-    document.addEventListener('mousemove', e => { tx = e.clientX; ty = e.clientY; });
+      document.addEventListener('mousemove', e => { tx = e.clientX; ty = e.clientY; });
 
-    // Lerp-smooth cursor movement (moncy.dev style)
-    const lerp = (a, b, t) => a + (b - a) * t;
-    function animCursor() {
-      cx = lerp(cx, tx, 0.12);
-      cy = lerp(cy, ty, 0.12);
-      cursor.style.transform = `translate(${cx - 25}px, ${cy - 25}px)`;
-      requestAnimationFrame(animCursor);
+      // Lerp-smooth cursor movement (moncy.dev style)
+      const lerp = (a, b, t) => a + (b - a) * t;
+      function animCursor() {
+        cx = lerp(cx, tx, 0.12);
+        cy = lerp(cy, ty, 0.12);
+        cursor.style.transform = `translate(${cx - 25}px, ${cy - 25}px)`;
+        requestAnimationFrame(animCursor);
+      }
+      animCursor();
+
+      document.querySelectorAll('a, button, .card, summary').forEach(el => {
+        el.addEventListener('mouseenter', () => cursor.classList.add('small'));
+        el.addEventListener('mouseleave', () => cursor.classList.remove('small'));
+      });
     }
-    animCursor();
-
-    document.querySelectorAll('a, button, .card').forEach(el => {
-      el.addEventListener('mouseenter', () => cursor.classList.add('small'));
-      el.addEventListener('mouseleave', () => cursor.classList.remove('small'));
-    });
 
     /* ── Loading screen ── */
     const loading  = document.getElementById('loading');
@@ -1455,7 +1764,7 @@
 
     /* ── Scroll-reveal ── */
     const ro = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setTimeout(() => entry.target.classList.add('visible'), 0);
           ro.unobserve(entry.target);
